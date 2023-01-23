@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.springframework.di.sfgdi.service.GreetingServiceImpl;
+import com.springframework.di.sfgdi.service.PropertyGreetingServiceImpl;
 
 @SpringBootTest
 public class PropertyBasedInjectionControllerTest {
@@ -15,7 +15,7 @@ public class PropertyBasedInjectionControllerTest {
 	@Before
 	public void setUp() {
 		propertyBasedInjectionController = new PropertyBasedInjectionController();
-		propertyBasedInjectionController.greetingService = new GreetingServiceImpl();
+		propertyBasedInjectionController.greetingService = new PropertyGreetingServiceImpl();
 	}
 	
 	

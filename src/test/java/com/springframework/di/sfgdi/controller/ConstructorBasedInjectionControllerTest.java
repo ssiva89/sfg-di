@@ -3,7 +3,7 @@ package com.springframework.di.sfgdi.controller;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.springframework.di.sfgdi.service.GreetingServiceImpl;
+import com.springframework.di.sfgdi.service.ConstructorGreetingServiceImpl;
 
 public class ConstructorBasedInjectionControllerTest {
 	
@@ -11,7 +11,7 @@ public class ConstructorBasedInjectionControllerTest {
 	
 	@Before
 	public void setUp() {
-		constructorBasedInjectionController = new ConstructorBasedInjectionController(new GreetingServiceImpl());
+		constructorBasedInjectionController = new ConstructorBasedInjectionController(new ConstructorGreetingServiceImpl());
 	}
 	
 	@Test

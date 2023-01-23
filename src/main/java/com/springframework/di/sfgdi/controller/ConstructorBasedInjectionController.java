@@ -1,6 +1,7 @@
 package com.springframework.di.sfgdi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.springframework.di.sfgdi.service.GreetingService;
@@ -12,7 +13,7 @@ public class ConstructorBasedInjectionController {
 	
 	//autowired annotation not required.
 	@Autowired
-	public ConstructorBasedInjectionController(GreetingService greetingService) {
+	public ConstructorBasedInjectionController(@Qualifier("constructorGreetingServiceImpl")GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 	
